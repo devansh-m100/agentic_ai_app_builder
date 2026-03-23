@@ -1,5 +1,9 @@
 from dotenv import load_dotenv
+from langchain_core.globals import set_verbose, set_debug
 load_dotenv()
+
+set_debug(True)
+set_verbose(True)
 
 from langchain_groq import ChatGroq
 llm = ChatGroq(model="openai/gpt-oss-120b")
